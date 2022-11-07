@@ -1,3 +1,4 @@
+// CHALLENGE INDIVIDUAL
 // import logo from './logo.svg';
 // import './App.css';
 // import React from 'react';
@@ -20,6 +21,8 @@
 // }
 
 // export default App;
+
+// CHALLENGE PAIR
 
 import  {Navbar}  from './componentes/navbar'; 
 import  {Footer}  from './componentes/footer';
