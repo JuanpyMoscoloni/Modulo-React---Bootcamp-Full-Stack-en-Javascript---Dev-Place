@@ -14,7 +14,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +24,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  background-color: #84b6f4;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +34,108 @@
   to {
     transform: rotate(360deg);
   }
+}
+.nav{
+  background-color:red
+}
+
+.container-nav{
+  display:flex;
+}
+ul{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  justify-content: space-around;
+}
+li {
+  font-size: 1rem;
+}
+
+footer{
+  width: 100%;
+  background-color: red;
+  bottom: 0;
+
+}
+
+h1{
+  text-align: center;
+}
+.container-sub-title{
+  margin-bottom: 2vw;
+}
+.container-footer{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  list-style: none;
+  justify-content:space-around;
+  position: relative;
+  
+  
+}
+.text-footer{
+  margin: 1vw 0 1vw 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+.grid-logo{
+
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15%;
+  grid-template-rows: 50% 50% ;
+ row-gap: 2vw;
+ column-gap: 4vw;
+ margin: 2%;
+ margin-bottom: 4vw;
+ justify-content: center;
+
+}
+.grid-logo img{
+width: 80%;
+height: auto;
+}
+
+.grid-logo div{
+display: block;
+margin: auto;
+
+}
+.grid-text{
+display: flex;
+}
+.container-img{
+display: block;
+margin: auto;
+}
+.item{
+box-sizing: border-box;
+border: 1px solid black;
+border-radius: 1vw;
+display: flex;
+justify-content: center;
+text-align: center;}
+
+.item:hover{
+  border: 2px solid red;
+}
+
+.price{
+font-size: 1vw;
+padding-bottom: 1em;
+}
+.grid-title{
+font-size: 1.6vw;
+margin: 0;
+}
+h1{
+  text-align: center;
+  margin-top: 2rem;
 }
