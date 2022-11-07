@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import './App.css';
+import { PrimerComponente } from './components/PrimerComponente';
 
 function Sumar(){
 
@@ -29,7 +30,6 @@ function Sumar(){
   )
 }
 
-
 function App() {
 
   let texto = "Hola Mundo";
@@ -47,6 +47,7 @@ function App() {
     <div><span>Usuario: {usuarios[0].nombre}</span><span> id: {usuarios[0].id}</span></div>
     <div><span>Usuario: {usuarios[1].nombre}</span><span> id: {usuarios[1].id}</span></div>
     <div><span>Usuario: {usuarios[2].nombre}</span><span> id: {usuarios[2].id}</span></div>
+    <PrimerComponente></PrimerComponente>
   </div>
 
   return (
