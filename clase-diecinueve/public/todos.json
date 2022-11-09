@@ -1,0 +1,58 @@
+[  { 
+    "title": "Skate VANS",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/12/0012_Maple-econo%CC%81mico-Ganesh-300x300.png",
+    "price": "$140000",
+    "type" : "Skates"
+},
+{
+    "title": "Skate BR",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/12/Retro-Gator-completo-copia-300x300.jpg",
+    "price": "$100000",
+    "type" : "Skates"
+
+}, 
+{
+    "title": "Skate Light",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/12/0009_Maple-econo%CC%81mico-Lemans-300x300.png",
+    "price": "$23000",
+    "type" : "Skates"
+
+},
+    { 
+    "title": "Tria Lumos",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/11/0020_Longboard-Superstart-Geomethry.png",
+    "price": "$10000",
+    "type" : "Longboards"
+},{
+    "title": "Urban Wrr",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/11/Deck__0019_Longboard-SuperStart-Grid-300x300.png",
+    "price": "$7000",
+    "type" : "Longboards"
+
+}, {
+    "title": "MTHelm",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/09/mini-long-fishtail-75-gran-ola-WEB-300x300.jpg",
+    "price": "$12000"  ,
+    "type" : "Longboards"
+
+},
+{ 
+    "title": "Jersey 101",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/06/WEB-KE-KAI-85-FISH-TAIL-SURF-SKATE-SOLO-DECK-300x300.jpg",
+    "price": "$14000",
+    "type" : "Tablas de Surf"
+
+},{
+    "title": "Kit Badana",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2021/12/Swell-deck-copia-300x300.jpg",
+    "price": "$9000",
+    "type" : "Tablas de Surf"
+
+}, {
+    "title": "Giyo Clipless",
+    "img": "https://www.labskateboarding.com/wp-content/uploads/2020/09/SURFSKATE-FISHTAIL-GRAN-OLA-deck-300x300.jpg",
+    "price": "$32000" ,
+    "type" : "Tablas de Surf"
+ 
+}
+]
