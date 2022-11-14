@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Carrousel from "./Carrousel.css";
+import "./Carrousel.css";
 
 function Carrusel() {
   const [index, setIndex] = useState(0);
@@ -10,26 +10,26 @@ function Carrusel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} variant="dark">
+    <Carousel activeIndex={index} onSelect={handleSelect} variant="light" className="carousel-pro">
       <Carousel.Item className="">
         <img
-          className="d-block w-70 mx-auto"
-          src="./images/appleSerie.jpg"
-          alt="First slide"
+          className="d-block w-100 "
+          src="./images/applePortada1.jpg"
+          alt=""
         />
       </Carousel.Item>
       <Carousel.Item className="">
         <img
-          className="d-block w-70 mx-auto"
-          src="./images/appleSerie2.jpg"
-          alt="Second slide"
+          className="d-block w-100 "
+          src="./images/applePortada2.jpg"
+          alt=""
         />
       </Carousel.Item>
       <Carousel.Item className="">
         <img
-          className="d-block w-70 mx-auto"
-          src="./images/appleSerie3.jpg"
-          alt="Third slide"
+          className="d-block w-100 "
+          src="./images/applePortada3.jpg"
+          alt=""
         />
       </Carousel.Item>
     </Carousel>

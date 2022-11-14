@@ -1,0 +1,19 @@
+.container-login-group{
+    margin: auto;
+    border: 2px solid rgb(227, 227, 227);
+    border-radius: 1rem;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.container-login-group h1{
+    width: 100%;
+    margin-top: 3rem;
+}
+.container-button-login{
+    display: flex;
+    justify-content: center;
+    }
+.container-button-login button{
+width: auto;
+}
