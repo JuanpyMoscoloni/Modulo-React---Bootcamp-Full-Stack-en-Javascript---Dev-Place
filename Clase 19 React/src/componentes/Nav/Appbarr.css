@@ -32,7 +32,7 @@
 .navbar-logo {
   display: flex;
   vertical-align: middle;
-  width: 80px;
+  width: 60px;
   justify-content: center;
 }
 .navbar-logo img {
@@ -65,12 +65,13 @@
 .navbar-logo-cart {
   display: flex;
   vertical-align: middle;
-  width: 80px;
+  width: 50px;
   justify-content: center;
 }
 
-.navbar-logo-cart img {
+.navbar-logo-cart i {
   display: block;
   width: 50%;
   height: auto;
+  
 }

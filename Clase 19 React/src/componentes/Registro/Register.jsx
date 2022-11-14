@@ -57,9 +57,7 @@ export default function Formulario() {
             </MDBBtn>
 
             <div className="text-center">
-              <p>
-                Not a member? <a href="#!">Register</a>
-              </p>
+              
               <p>or sign up with:</p>
 
               <MDBBtn floating className="mx-1">

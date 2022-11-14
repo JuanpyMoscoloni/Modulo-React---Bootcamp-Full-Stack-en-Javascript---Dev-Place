@@ -1,39 +1,31 @@
-import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import "./Carrousel.css";
 
-function Carrusel() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
+function CarouselFadeExample() {
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} variant="light" className="carousel-pro">
-      <Carousel.Item className="">
+    <Carousel fade>
+      <Carousel.Item>
         <img
-          className="d-block w-100 "
+          className="d-block w-100"
           src="./images/applePortada1.jpg"
-          alt=""
+          alt="First slide"
         />
       </Carousel.Item>
-      <Carousel.Item className="">
+      <Carousel.Item>
         <img
-          className="d-block w-100 "
+          className="d-block w-100"
           src="./images/applePortada2.jpg"
-          alt=""
+          alt="Second slide"
         />
       </Carousel.Item>
-      <Carousel.Item className="">
+      <Carousel.Item>
         <img
-          className="d-block w-100 "
+          className="d-block w-100"
           src="./images/applePortada3.jpg"
-          alt=""
+          alt="Third slide"
         />
       </Carousel.Item>
     </Carousel>
   );
 }
 
-export default Carrusel;
+export default CarouselFadeExample;

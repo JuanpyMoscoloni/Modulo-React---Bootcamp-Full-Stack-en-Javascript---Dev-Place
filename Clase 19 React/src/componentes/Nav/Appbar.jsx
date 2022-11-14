@@ -52,7 +52,7 @@ function Appbar() {
               <Nav.Link href='/signin'>Log In</Nav.Link>
 
               <a className="navbar-logo-cart" href="#">
-                <img src="./images/carrito-de-compras.png"></img>
+              <i class="fas fa-shopping-cart"></i>
               </a>
             </Nav>
           </Navbar.Collapse>
