@@ -16,18 +16,18 @@ export default function Login() {
       <MDBCol>
         <div className="container-login-group">
           <h1 className="text-center mt-3"> Login your account </h1>
-          <form className="m-3 p-4 justify-content-center flex-start">
+          <form className="mt-1 p-4 justify-content-center flex-start">
             <MDBRow className="mb-4"></MDBRow>
             <MDBInput
               className="mb-4"
               type="email"
-              id="form3Example3"
+              id="formExample3"
               placeholder="Email address"
             />
             <MDBInput
-              className="mb-4"
+              className="mb-4 container-password"
               type="password"
-              id="form3Example4"
+              id="formExample4"
               placeholder="Password"
             />
 

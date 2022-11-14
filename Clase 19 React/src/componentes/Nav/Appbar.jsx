@@ -8,7 +8,7 @@ import "./Appbarr.css";
 function Appbar() {
   return (
     <>
-      <Navbar expand="lg" className="container-navbar">
+      <Navbar expand="lg" className="container-navbar position-fixed">
         <Container fluid>
           <Nav.Link className="navbar-logo" href="/">
             <img src="./images/apple.png"></img>

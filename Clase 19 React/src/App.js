@@ -1,13 +1,11 @@
-import "./App.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
+import "./componentes/app.css";
 import Appbar from "./componentes/Nav/Appbar";
 import HomePage from "./componentes/HomePage";
 import Footer from "./componentes/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegisterPage from "./componentes/RegisterPage";
 import SignInPage from "./componentes/SignInPage";
+import { Compartir } from "./componentes/Sharecito/Share";
 
 function App() {
   return (
@@ -20,6 +18,7 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
         </Routes>
       </BrowserRouter>
+      <Compartir/>
       <Footer />
     </>
   );
