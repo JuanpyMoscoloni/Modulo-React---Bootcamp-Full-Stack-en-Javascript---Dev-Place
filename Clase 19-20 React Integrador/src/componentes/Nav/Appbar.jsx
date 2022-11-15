@@ -19,16 +19,14 @@ function Appbar() {
             className="d-flex justify-content-between"
           >
             <div className="container-botton-form">
-            <Form className="d-flex container-form">
+            <Form className="d-flex container-form me-2 input-search">
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2 input-search"
                 aria-label="Search"
               />
-              <a className="navbar-logo-lupa" href="#">
-            <img src="./images/lupa.png"/>
-          </a>
+              
             </Form>
             </div>
             <Nav
@@ -36,23 +34,13 @@ function Appbar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <NavDropdown title="Categories" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-
+              
+              <Nav.Link href='/productos'>Productos</Nav.Link>
               <Nav.Link href='/register'>Register</Nav.Link>
               <Nav.Link href='/signin'>Log In</Nav.Link>
 
               <a className="navbar-logo-cart" href="#">
-              <i class="fas fa-shopping-cart"></i>
+              <i class="far fa-shopping-cart"></i>
               </a>
             </Nav>
           </Navbar.Collapse>
