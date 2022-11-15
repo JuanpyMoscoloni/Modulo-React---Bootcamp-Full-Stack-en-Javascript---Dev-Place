@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegisterPage from "./componentes/RegisterPage";
 import SignInPage from "./componentes/SignInPage";
 import { Compartir } from "./componentes/Sharecito/Share";
+import ProductosPage from "./componentes/ProductosPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/signin" element={<SignInPage />} />
+          <Route path="/productos" element={<ProductosPage/>} />
         </Routes>
       </BrowserRouter>
       <Compartir/>

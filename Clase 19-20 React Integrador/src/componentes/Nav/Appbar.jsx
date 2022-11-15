@@ -2,8 +2,8 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Appbarr.css";
+import { MDBIcon } from 'mdb-react-ui-kit';
 
 function Appbar() {
   return (
@@ -39,9 +39,9 @@ function Appbar() {
               <Nav.Link href='/register'>Register</Nav.Link>
               <Nav.Link href='/signin'>Log In</Nav.Link>
 
-              <a className="navbar-logo-cart" href="#">
-              <i class="far fa-shopping-cart"></i>
-              </a>
+              <Nav.Link className="navbar-logo-cart" href="/cart">
+              <MDBIcon fas icon="shopping-cart" />
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

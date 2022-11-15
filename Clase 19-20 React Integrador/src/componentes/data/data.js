@@ -41,6 +41,13 @@ let cartas = [
       title: "iPhone XS",
       text: "USD$600",
     },
+    {
+      id: 7,
+      img: "https://i.ebayimg.com/images/g/pAsAAOSwtSdhMJsg/s-l500.png",
+      title: "iPhone XS",
+      text: "USD$600",
+    },
+    
     
   ];
 
