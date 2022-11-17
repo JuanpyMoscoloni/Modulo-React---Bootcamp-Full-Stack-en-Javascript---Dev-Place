@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import "./Cards.css";
 import cartas from "../data/data";
+import { React, useState } from "react";
+import {useCart} from "react-use-cart";
 
 function generateRandom(min, max) {
   min = Math.ceil(min);
@@ -46,6 +48,28 @@ function Cards() {
         }
       })}
     </Container>
+  );
+}
+
+export function CrearCard(props) {
+
+  return (
+    <>
+    <Container className="d-flex gap-4 justify-content-center mx-auto">
+     <Card
+              key={props.element.id}
+              style={{ width: "18rem" }}
+              className="cartas-general"
+            >
+              <Card.Img variant="top" src={props.element.img} />
+              <Card.Body>
+                <Card.Title> {props.element.title} </Card.Title>
+                <Card.Text>{props.element.text}</Card.Text>
+              </Card.Body>
+            </Card>
+            </Container>
+    </>
+    
   );
 }
 

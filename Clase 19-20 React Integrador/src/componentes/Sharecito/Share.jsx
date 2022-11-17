@@ -12,7 +12,7 @@ export const Compartir = () => {
       share.classList.remove("hover");
     }, 3000);
   return (
-    <div class="share">
+    <div className="share">
       <span>Share</span>
       <nav>
         <a href="https://twitter.com/Apple">

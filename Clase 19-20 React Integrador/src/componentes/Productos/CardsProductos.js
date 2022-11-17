@@ -1,36 +1,43 @@
-import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import cartas from "../data/data";
-import './CardsProductos.css';
-import { MDBIcon } from 'mdb-react-ui-kit';
+import "./CardsProductos.css";
+import CardGroup from "react-bootstrap/CardGroup";
+import { MDBIcon } from "mdb-react-ui-kit";
+import { Row, Col } from "react-bootstrap";
 
-function CardsProductos() {
-    
+const CardsProductos = ({ productItems , handleAddProduct }) => {
   return (
-    <Container className="justify-content-center mx-auto container-cards-all">
-        
-      {cartas.map((element) => {
-        {
-          return (
-            <Card
-              key={element.id}
-              style={{ width: "18rem" }}
-              className="cartas-general"
-            >
-              <Card.Img variant="top" src={element.img} />
-              <Card.Body>
-                <Card.Title> {element.title} </Card.Title>
-                <Card.Text>{element.text}</Card.Text>
-                <button className="ripple ripple-surface ripple-surface-light btn btn-dark button-cart">
-                <MDBIcon fas icon="cart-plus" />
-                </button>
-              </Card.Body>
-            </Card>
-          );
-        }
-      })}
-    </Container>
+    <CardGroup className="card-group">
+      <Row>
+        {productItems.map((productItem) => {
+          {
+            return (
+              <>
+                <Col lg={4} sm={6} xl={2}>
+                  <Card
+                    key={productItem.id}
+                    style={{ width: "18rem" }}
+                    className="cartas-general"
+                  >
+                    <Card.Img variant="top" src={productItem.img} />
+                    <Card.Body>
+                      <Card.Title> {productItem.title} </Card.Title>
+                      <Card.Text>{productItem.text}</Card.Text>
+                      <button
+                        className="ripple ripple-surface ripple-surface-light btn btn-dark button-cart"
+                        onClick={() => handleAddProduct(productItems)}
+                      >
+                        <MDBIcon fas icon="cart-plus" />
+                      </button>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </>
+            );
+          }
+        })}
+      </Row>
+    </CardGroup>
   );
-}
+};
 
 export default CardsProductos;

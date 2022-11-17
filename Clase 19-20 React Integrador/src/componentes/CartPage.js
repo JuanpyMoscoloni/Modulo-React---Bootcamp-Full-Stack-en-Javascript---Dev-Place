@@ -5,18 +5,18 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "mdbreact/dist/css/mdb.css";
 import BotonFiltro from "./Productos/BotonFiltro";
-import CardsProductos from "./Productos/CardsProductos";
+import Cart from './Cart/Cart'
 import { Titulo } from "./Titulos/Titulo";
 
-function ProductosPage({ productItems, handleAddProduct}) {
+export function CartPage({ cartItems, handleAddProduct}) {
   return (
     <>
         <Titulo />
         <BotonFiltro/>
-        <CardsProductos productItems={productItems} handleAddProduct={handleAddProduct} />
+        <Cart cartItems={cartItems} handleAddProduct={handleAddProduct}/>
         
     </>
   );
 }
 
-export default ProductosPage;
+export default CartPage;
