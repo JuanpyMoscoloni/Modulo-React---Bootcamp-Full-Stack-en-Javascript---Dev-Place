@@ -8,12 +8,12 @@ import BotonFiltro from "./Productos/BotonFiltro";
 import CardsProductos from "./Productos/CardsProductos";
 import { Titulo } from "./Titulos/Titulo";
 
-function ProductosPage({ productItems, handleAddProduct}) {
+function ProductosPage() {
   return (
     <>
         <Titulo />
         <BotonFiltro/>
-        <CardsProductos productItems={productItems} handleAddProduct={handleAddProduct} />
+        <CardsProductos />
         
     </>
   );

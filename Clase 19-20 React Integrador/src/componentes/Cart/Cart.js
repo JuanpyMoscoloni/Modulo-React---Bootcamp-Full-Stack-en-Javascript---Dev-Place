@@ -1,25 +1,107 @@
 import React from "react";
+import { useCart } from "react-use-cart";
+import Button from "react-bootstrap/Button";
+import './Cart.css'
 
-export const Cart = ({ cartItems }) => {
+export default function Cart() {
+  const {
+    items,
+    isEmpty,
+    totalItems,
+    totalUniqueItems,
+    cartTotal,
+    updateItemQuantity,
+    removeItem,
+    emptyCart,
+  } = useCart();
+  if (isEmpty)
+    return (
+      <div className="carrito-vacio">
+        <h1> EL CARRITO ESTA VACIO </h1>
+      </div>
+    );
   return (
     <>
-      <div className="cart-items">
-        <div className="cart-items-header"> Cart Items</div>
+      <section className="section-carrito">
+        <section className="carrito">
+          <div className="container-title-carrito">
+            <h5 className="carrito-title">
+              {!totalUniqueItems} ITEMS TOTALES: ({totalItems})
+            </h5>
+          </div>
 
-        {cartItems.length === 0 && (
-          <div className="cart-items-empty"> No items are added </div>
-        )}
+          {items.map((Element, index) => {
+            return (
+              <>
+                <div className="carrito-cards">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td className="container-imagen-td">
+                          <div className="container-img-carrito">
+                            <img src={Element.img} alt="" />
+                          </div>
+                        </td>
+                        <td className="carrito-card-title text-center">
+                          {Element.title}
+                        </td>
 
-        <div>
-          {cartItems.map((item) => (
-            <div key={item.id} className="cart-item-list">
-              <img className="cart-items-img" src={item.img} /> 
-            </div>
-          ))}
-        </div>
-      </div>
+                        <td className="carrito-card-price text-center">
+                          {" "}
+                          PRECIO: {Element.price}
+                        </td>
+
+                        
+
+                        <td>
+                          <div className="td-buttons">
+                            <Button
+                              onClick={() =>
+                                updateItemQuantity(
+                                  Element.id,
+                                  Element.quantity + 1
+                                )
+                              }
+                              className="carrito-button"
+                              variant="dark"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </Button>
+
+                            <td className="carrito-cantidad text-center">
+                          {Element.quantity}
+                        </td>
+
+                            <Button
+                              className="carrito-button"
+                              variant="dark"
+                              onClick={() =>
+                                updateItemQuantity(
+                                  Element.id,
+                                  Element.quantity - 1
+                                )
+                              }
+                            >
+                              <i class="fas fa-minus"></i>
+                            </Button>
+
+                            <Button
+                              variant="danger"
+                              onClick={() => removeItem(Element.id)}
+                            >
+                              Eliminar
+                            </Button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            );
+          })}
+        </section>
+      </section>
     </>
   );
-};
-
-export default Cart;
+}

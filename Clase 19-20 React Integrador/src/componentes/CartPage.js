@@ -8,13 +8,12 @@ import BotonFiltro from "./Productos/BotonFiltro";
 import Cart from './Cart/Cart'
 import { Titulo } from "./Titulos/Titulo";
 
-export function CartPage({ cartItems, handleAddProduct}) {
+const CartPage = () => {
   return (
     <>
         <Titulo />
         <BotonFiltro/>
-        <Cart cartItems={cartItems} handleAddProduct={handleAddProduct}/>
-        
+        <Cart />
     </>
   );
 }

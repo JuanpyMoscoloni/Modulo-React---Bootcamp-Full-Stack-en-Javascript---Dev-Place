@@ -11,44 +11,32 @@ import CartPage from "./componentes/CartPage";
 import { IPhone } from "./componentes/PaginasFiltro/iPhone";
 import { IPad } from "./componentes/PaginasFiltro/iPad";
 import { IWatch } from "./componentes/PaginasFiltro/iWatch";
-import { useState } from "react";
-import cartas from './componentes/data/data';
+import { CartProvider } from "react-use-cart";
 
-const App = () => {
 
-  const productItems = cartas;
-  const [cartItems, setCartItems] = useState([]);
 
-  const handleAddProduct = (product) => {
-    const ProductExist = cartItems.find((item) => item.id === product.id);
-    if (ProductExist) {
-      setCartItems(
-        cartItems.map((item) => item.id === product.id
-          ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
-          : item
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
-  };
+const App = () => {  
+
+  
   return (
     <>
+    <CartProvider>
       <Appbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/signin" element={<SignInPage />} />
-          <Route path="/productos" element={<ProductosPage productItems={productItems} handleAddProduct={handleAddProduct} />} />
+          <Route path="/productos" element={<ProductosPage />} />
           <Route path="/iphone" element={<IPhone />} />
           <Route path="/ipad" element={<IPad />} />
           <Route path="/iwatch" element={<IWatch />} />
-          <Route path="/cart" element={<CartPage cartItems={cartItems} handleAddProduct={handleAddProduct} />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </BrowserRouter>
       <Compartir />
       <Footer />
+      </CartProvider>
     </>
   );
 }
