@@ -35,7 +35,7 @@ function Appbar() {
               navbarScroll
             >
               
-              <Nav.Link href='/productos'>Productos</Nav.Link>
+              <Nav.Link href='/productos'>Products</Nav.Link>
               <Nav.Link href='/register'>Register</Nav.Link>
               <Nav.Link href='/signin'>Log In</Nav.Link>
 

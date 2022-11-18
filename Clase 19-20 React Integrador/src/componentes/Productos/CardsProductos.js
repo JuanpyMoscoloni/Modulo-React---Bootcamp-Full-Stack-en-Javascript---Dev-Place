@@ -38,7 +38,9 @@ export  function CreateCard(props) {
           style={{ width: "18rem" }}
           className="cartas-general"
         >
+          <div className="contenedor-imagenes">
           <Card.Img variant="top" src={props.img} />
+          </div>
           <Card.Body>
             <Card.Title> {props.title} </Card.Title>
             <Card.Text><b>USD$</b> {props.price}</Card.Text>

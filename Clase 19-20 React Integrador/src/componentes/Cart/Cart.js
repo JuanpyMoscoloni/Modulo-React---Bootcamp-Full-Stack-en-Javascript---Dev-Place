@@ -1,7 +1,7 @@
 import React from "react";
 import { useCart } from "react-use-cart";
 import Button from "react-bootstrap/Button";
-import './Cart.css'
+import "./Cart.css";
 
 export default function Cart() {
   const {
@@ -16,7 +16,7 @@ export default function Cart() {
   } = useCart();
   if (isEmpty)
     return (
-      <div className="carrito-vacio">
+      <div className="carrito-vacio text-center m-4">
         <h1> EL CARRITO ESTA VACIO </h1>
       </div>
     );
@@ -25,6 +25,9 @@ export default function Cart() {
       <section className="section-carrito">
         <section className="carrito">
           <div className="container-title-carrito">
+            <div className="cart-total">
+              <h5>CART TOTAL: {cartTotal}</h5>
+            </div>
             <h5 className="carrito-title">
               {!totalUniqueItems} ITEMS TOTALES: ({totalItems})
             </h5>
@@ -51,8 +54,6 @@ export default function Cart() {
                           PRECIO: {Element.price}
                         </td>
 
-                        
-
                         <td>
                           <div className="td-buttons">
                             <Button
@@ -69,8 +70,8 @@ export default function Cart() {
                             </Button>
 
                             <td className="carrito-cantidad text-center">
-                          {Element.quantity}
-                        </td>
+                              {Element.quantity}
+                            </td>
 
                             <Button
                               className="carrito-button"
@@ -86,6 +87,7 @@ export default function Cart() {
                             </Button>
 
                             <Button
+                              className="carrito-button-eliminar"
                               variant="danger"
                               onClick={() => removeItem(Element.id)}
                             >

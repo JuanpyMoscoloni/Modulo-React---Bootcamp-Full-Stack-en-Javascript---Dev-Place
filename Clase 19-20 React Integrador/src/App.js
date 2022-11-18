@@ -20,6 +20,7 @@ const App = () => {
   
   return (
     <>
+    <div className="container-app">
     <CartProvider>
       <Appbar />
       <BrowserRouter>
@@ -35,8 +36,10 @@ const App = () => {
         </Routes>
       </BrowserRouter>
       <Compartir />
-      <Footer />
+       <Footer />
       </CartProvider>
+    </div>
+   
     </>
   );
 }
