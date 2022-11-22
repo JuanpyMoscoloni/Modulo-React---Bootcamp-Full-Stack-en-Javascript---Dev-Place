@@ -1,11 +1,13 @@
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./Appbarr.css";
-import { MDBIcon } from 'mdb-react-ui-kit';
-
+import { MDBIcon } from "mdb-react-ui-kit";
+import {useCart} from "react-use-cart";
 function Appbar() {
+  const {
+    totalUniqueItems, totalItems
+  } = useCart();
   return (
     <>
       <Navbar expand="lg" className="container-navbar position-fixed">
@@ -18,29 +20,21 @@ function Appbar() {
             id="navbarScroll"
             className="d-flex justify-content-between"
           >
-            <div className="container-botton-form">
-            <Form className="d-flex container-form me-2 input-search">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2 input-search"
-                aria-label="Search"
-              />
-              
-            </Form>
-            </div>
+            <div className="container-botton-form"></div>
             <Nav
               className="d-flex flex-end"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              
-              <Nav.Link href='/productos'>Products</Nav.Link>
-              <Nav.Link href='/register'>Register</Nav.Link>
-              <Nav.Link href='/signin'>Log In</Nav.Link>
+              <Nav.Link href="/productos">Products</Nav.Link>
+              <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link href="/signin">Log In</Nav.Link>
 
               <Nav.Link className="navbar-logo-cart" href="/cart">
-              <MDBIcon fas icon="shopping-cart" />
+                <MDBIcon fas icon="shopping-cart" />
+                <div className="shopping-cart-numero">
+                  {!totalUniqueItems}{totalItems}
+                </div>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

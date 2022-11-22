@@ -13,35 +13,31 @@ import { IPad } from "./componentes/PaginasFiltro/iPad";
 import { IWatch } from "./componentes/PaginasFiltro/iWatch";
 import { CartProvider } from "react-use-cart";
 
-
-
-const App = () => {  
+const App = () => {
 
   
   return (
     <>
-    <div className="container-app">
-    <CartProvider>
-      <Appbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/signin" element={<SignInPage />} />
-          <Route path="/productos" element={<ProductosPage />} />
-          <Route path="/iphone" element={<IPhone />} />
-          <Route path="/ipad" element={<IPad />} />
-          <Route path="/iwatch" element={<IWatch />} />
-          <Route path="/cart" element={<CartPage />} />
-        </Routes>
-      </BrowserRouter>
-      <Compartir />
-       <Footer />
-      </CartProvider>
-    </div>
-   
+      <div className="container-app">
+        <CartProvider>
+          <Appbar />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/signin" element={<SignInPage />} />
+              <Route path="/productos" element={<ProductosPage />} />
+              <Route path="/iphone" element={<IPhone />} />
+              <Route path="/ipad" element={<IPad />} />
+              <Route path="/iwatch" element={<IWatch />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+          </BrowserRouter>
+          <Compartir />
+          <Footer />
+        </CartProvider>
+      </div>
     </>
   );
-}
-
+};
 export default App;
