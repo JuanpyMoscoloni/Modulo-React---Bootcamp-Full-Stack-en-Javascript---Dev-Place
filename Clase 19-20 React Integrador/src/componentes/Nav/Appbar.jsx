@@ -26,7 +26,11 @@ function Appbar() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
+              
               <Nav.Link href="/productos">Products</Nav.Link>
+              <Nav.Link className="navbar-logo-plus" href="/create">
+              <MDBIcon fas icon="plus" />
+              </Nav.Link>
               <Nav.Link href="/register">Register</Nav.Link>
               <Nav.Link href="/signin">Log In</Nav.Link>
 

@@ -12,6 +12,7 @@ import { IPhone } from "./componentes/PaginasFiltro/iPhone";
 import { IPad } from "./componentes/PaginasFiltro/iPad";
 import { IWatch } from "./componentes/PaginasFiltro/iWatch";
 import { CartProvider } from "react-use-cart";
+import CreatePage from "./componentes/CreatePage";
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/signin" element={<SignInPage />} />
               <Route path="/productos" element={<ProductosPage />} />
+              <Route path="/create" element={<CreatePage />} />
               <Route path="/iphone" element={<IPhone />} />
               <Route path="/ipad" element={<IPad />} />
               <Route path="/iwatch" element={<IWatch />} />

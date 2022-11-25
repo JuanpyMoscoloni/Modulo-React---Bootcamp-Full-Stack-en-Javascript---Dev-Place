@@ -4,7 +4,6 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import BotonFiltro from "./Productos/BotonFiltro";
-import CardsProductos from "./Productos/CardsProductos";
 import { Titulo } from "./Titulos/Titulo";
 import Form from "react-bootstrap/Form";
 import { CreateCard } from "./Productos/CardsProductos";
