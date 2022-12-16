@@ -4,6 +4,7 @@ import Shoes from './Store/shoes';
 import Gorras from './Store/hats';
 import Tshirts from './Store/tshirts';
 import Nieto from './Nieto';
+import Calculator from './calculator';
 
 function BarraNavegacion() {
   return (
@@ -24,6 +25,9 @@ function BarraNavegacion() {
       </Tab>
       <Tab eventKey="profile" title="Punto 2">
        <Nieto />
+      </Tab> 
+      <Tab eventKey="calculator" title="Calculadora">
+       <Calculator />
       </Tab> 
       
     </Tabs>
